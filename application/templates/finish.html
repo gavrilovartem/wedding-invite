@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Приглашение на свадьбу</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript">
+    timeend = new Date();
+    timeend = new Date(2019, 06 - 1, 02, 15, 00)
+    function time() {
+      today = new Date();
+      today = Math.floor((timeend - today) / 1000);
+      tsec = today % 60;
+      today = Math.floor(today / 60);
+      if (tsec < 10) tsec = '0' + tsec;
+      tmin = today % 60;
+      today = Math.floor(today / 60);
+      if (tmin < 10) tmin = '0' + tmin;
+      thour = today % 24;
+      today = Math.floor(today / 24);
+      timestr = today + " дней " + thour + " часов " + tmin + " минут " + tsec + " секунд";
+      document.getElementById('t').innerHTML = timestr;
+      window.setTimeout("time()", 1000);
+    }
+  </script>
+
+
+<body onload="time()">
+  <style>
+    @font-face {
+      font-family: 'CormorantGaramond';
+      src: url('/static/images/CormorantGaramond-Regular.ttf');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Lemon_Tuesday';
+      src: url('/static/images/Lemon_Tuesday.otf');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+  </head>
+
+  <body>
+
+    <div class="container-fluid bg-1 text-center ">
+      <font size="6" face="Lemon_Tuesday" color="#637873">
+        <p><br><br> Спасибо за ответ!<br>
+        </p>
+      </font>
+    </div>
+
+    <div class="container-fluid bg-2 text-center ">
+      <br>
+      <font size="5" color="#607873" face="CormorantGaramond">
+        <p>-Вступай в наш чат в
+          <a href="https://t.me/joinchat/DTh8YxB9bfkH9WaIxWmRRQ" target="_blank">Телеграме</a>
+        </p>
+        <p>
+          -Публикуй свои воспоминания с праздника в нашем Instagram @02.06_foto (пароль Gavrilovy)
+        </p>
+        <p>-Не забывай посмотреть прогноз
+          <a href="https://yandex.ru/pogoda/moscow?from=serp_title" target="_blank">погоды</a>
+        </p>
+      </font>
+      <img src="/static/images/99.png" class="img " alt="Сердце">
+      <br><br><br>
+      <br><br>
+      <font size="5" face="Lemon_Tuesday" color="#607873">
+        <p>- Дата и место проведения -</p>
+      </font>
+      <font face="CormorantGaramond">
+        <p>2 июня в 15:00 в Мини-Отеле Таежный</p>
+        <p>Московская обл, Раменское, д. Заболотье, Ленинская 32/5</p>
+      </font>
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3AR06aO-GG8X-RPHX9ICDj-DBCzwUS-G_9&amp;source=constructor"
+        width="320" height="300" frameborder="0"></iframe>
+      <br><br><br>
+      <font size="5" face="Lemon_Tuesday" color="#607873">
+        <p>- До события осталось -</p>
+      </font>
+      <font face="CormorantGaramond">
+        <h3><span id="t" style="font-size:20px"></span></h3>
+        <br>
+        <font size="5" face="Lemon_Tuesday" color="#607873">
+          <p>- Стиль свадьбы: эко-рустик -</p>
+        </font>
+        <p>Поэтому рекоммендованы бежевый, неяркие зеленый и коричневый,
+          <br> а также <a
+            href="https://wiki.wildberries.ru/glossary/%D0%BF%D0%B0%D1%81%D1%82%D0%B5%CC%81%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BE%D1%82%D1%82%D0%B5%D0%BD%D0%BE%D0%BA"
+            target="_blank">пастельные
+          </a> оттенки одежды.
+          <br> Внимание! Под запретом яркие цвета (красный, пестрый принт, леопардовый и
+          пр).</p>
+        <br>
+        <font size="5" face="Lemon_Tuesday" color="#607873">
+          <p>- Коротко о подарках -</p>
+        </font>
+        <p>
+          Не ломай голову над ними. Твои пожелания в конверте помогут нам осуществить мечту.
+          <br>И, пожалуйста, не дари цветы!
+          <br>Мы не успеем насладиться их красотой.
+          Вместо цветов мы с радостью примем <br>Настольную игру, Книгу или Грампластинку :)
+        </p>
+    </div>
+
+    <div class="container-fluid bg-1 text-center ">
+      <font size="6" face="Lemon_Tuesday" color="#637873">
+        <p><br>Анна и Артем <br> Гавриловы<br>
+        </p>
+
+      </font>
+      <img src="/static/images/12344.png" class="img-fluid col-lg-2" alt="Цветы">
+    </div>
+  </body>
+
+</html>

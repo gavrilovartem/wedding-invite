@@ -1,0 +1,62 @@
+{% block content %}
+<h1>Время узнать, что хотят наши гости!</h1>
+
+<table border="1" cellpading="5">
+  <tr>
+    <td><b>Имя</b></td>
+    <td><b> Приеду </b></td>
+    <td><b> Как доберусь</b></td>
+    <td><b> Нужна ли ночевка</b></td>
+  </tr>
+  {% for query in queries %}
+  <tr>
+    <td>{{query[0]}}</td>
+    <td>{{query[1]}}</td>
+    <td>{{query[2]}}</td>
+    <td>{{query[3]}}</td>
+  </tr>
+  {%endfor%}
+</table>
+<br><br><br>
+
+<table border="1" cellpading="5">
+  <tr>
+    <td><b>Алкоголь</b></td>
+  </tr>
+  {% for query in queries_alc %}
+  <tr>
+    <td>{{query[0]}}</td>
+  </tr>
+  {%endfor%}
+</table>
+<br><br><br>
+
+<table border="1" cellpading="5">
+  <tr>
+    <td><b> Имя </b></td>
+    <td><b>Музыка </b></td>
+  </tr>
+  {% for query in queries_music %}
+  <tr>
+    <td> {{query[0]}}</td>
+    <td> {{query[1]}}</td>
+  </tr>
+  {%endfor%}
+</table>
+<br><br><br>
+
+
+<table border="1" cellpading="5">
+  <tr>
+    <td><b> Имя </b></td>
+    <td><b> Про еду </b></td>
+  </tr>
+  {% for query in queries_wishes %}
+  <tr>
+    <td> {{query[0]}}</td>
+    <td> {{query[1]}}</td>
+  </tr>
+  {%endfor%}
+</table>
+<br><br><br>
+{%endblock%}
