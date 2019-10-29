@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'CormorantGaramond';
+  src: url('../images/CormorantGaramond-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lemon_Tuesday';
+  src: url('../images/Lemon_Tuesday.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+p.name {
+  margin-top:  0.75em;
+  font-family: 'Lemon_Tuesday';
+  font-size: xx-large;
+  color: #637873;
+}
+h2, h3, h4 {
+  font-family: 'CormorantGaramond';
+}
+p.headers{
+  font-family: 'Lemon_Tuesday';
+  font-size: x-large;
+  color: #607873;
+}
+.paragraph {
+  font-family: 'CormorantGaramond';
+}
+
+.form-headers {
+  font-family: 'CormorantGaramond';
+  font-size: large;
+  color: #43514e;
+  margin-bottom: 1.5em;
+}
+
+.little-text {
+  font-family: 'CormorantGaramond';
+  color: #55625F;
+  margin-bottom: 1.5em;
+}
+
+.links {
+  font-family: 'CormorantGaramond';
+  font-size: x-large;
+  color: #607873;
+}
+
+
+#forecast {
+  margin-bottom: 3em;
+}
+.margin-top-3 {
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+#finish-name {
+  margin-top: 2em;
+}
+#h2-margin {
+  margin-top: 1.5em;
+}
+
+#p-margin {
+  margin-top: 1.5em;
+}
+
+#button-margin {
+  margin-top: 1em;
+}

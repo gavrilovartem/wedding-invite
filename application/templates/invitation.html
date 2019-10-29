@@ -1,160 +1,130 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Приглашение на свадьбу</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../static/css/style.css" />
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-  </script>
+    </script>
+</head>
 
-<body onload="time()">
-  <style>
-    @font-face {
-      font-family: 'CormorantGaramond';
-      src: url('/static/images/CormorantGaramond-Regular.ttf');
-      font-weight: normal;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Lemon_Tuesday';
-      src: url('/static/images/Lemon_Tuesday.otf');
-      font-weight: normal;
-      font-style: normal;
-    }
-  </style>
-  </head>
+<body>
+  <div class="container-fluid bg-1 text-center">
+    <img src="/static/images/12344.png" class="img-fluid col-lg-5" alt="Цветы">
+    <p class="name"> Анна и Артем <br> Гавриловы
+    </p>
 
-  <body>
-    <div class="container-fluid bg-1 text-center">
-      <img src="/static/images/12344.png" class="img-fluid col-lg-5" alt="Цветы">
-      <font size="6" face="Lemon_Tuesday" color="#637873">
-        <br><br> <p> Анна и Артем <br> Гавриловы
-        </p>
-      </font>
-      <img src="/static/images/0206.png" class="img-fluid col-lg-2" alt="Дата">
-      <br><br>
-      <img src="/static/images/12355.png" class="img-fluid" alt="Цветы">
-    </div>
+    <img src="/static/images/0206.png" class="img-fluid col-lg-4" alt="Дата">
+    <br><br>
+    <img src="/static/images/12355.png" class="img-fluid" alt="Цветы">
+  </div>
 
-    <div class="container-fluid bg-2 text-center ">
-      <br><br>
+  <div class="container-fluid bg-2 text-center ">
+    <h2 id="h2-margin"> ..........................
+    </h2>
+    <h2>
+      {% block content %}
+      {{current_user.realname}}
+    </h2>
+    <h3> 2 июня в 15:00
+    </h3>
+    <h4>Будем счастливы видеть тебя на нашей свадьбе</h4>
+    <h4>в Мини-Отеле Таежный (г. Раменское)</h4>
+    <h2> ..........................
+    </h2>
 
-      <font face="CormorantGaramond">
-        <h2> ..........................
-        </h2>
-        <h2>
-          {% block content %}
-          {{current_user.realname}}
-        </h2>
-        <h3> 2 июня в 15:00
-        </h3>
-      </font>
-      <font face="CormorantGaramond">
-        <h4>Будем счастливы видеть тебя на нашей свадьбе</h4>
-        <h4>в Мини-Отеле Таежный (г. Раменское)</h4>
-        <h2> ..........................
-        </h2>
-        <br>
-      </font>
-      <font face="CormorantGaramond">
-        <br>
-        <font size="5" face="Lemon_Tuesday" color="#607873">
-          <p>- Стиль свадьбы: эко-рустик -</p>
-        </font>
-        <p>Поэтому рекоммендованы бежевый, неяркие зеленый и коричневый,
-          <br> а также <a
-            href="https://wiki.wildberries.ru/glossary/%D0%BF%D0%B0%D1%81%D1%82%D0%B5%CC%81%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BE%D1%82%D1%82%D0%B5%D0%BD%D0%BE%D0%BA"
-            target="_blank">пастельные</a> оттенки одежды.
-          <br> Внимание! Под запретом яркие цвета (красный, пестрый принт, леопардовый и
-          пр).</p>
-        <br>
-        <font size="5" face="Lemon_Tuesday" color="#607873">
-          <p>- Коротко о подарках -</p>
-        </font>
-        <p>
-          Не ломай голову над ними. Твои пожелания в конверте помогут нам осуществить
-          мечту.
-          <br>И, пожалуйста, не дари цветы!
-          <br>Мы не успеем насладиться их красотой.
-          Вместо цветов мы с радостью примем <br>Настольную игру, Книгу или Грампластинку
-          :)
-        </p>
-        <br>
-        <font size="5" face="Lemon_Tuesday" color="#607873">
-          <p>- Место проведения -</p>
-        </font>
-        <p>Мини-Отель Таежный</p>
-        <p>Московская обл, Раменское, д. Заболотье, Ленинская 32/5</p>
-        <iframe
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3AR06aO-GG8X-RPHX9ICDj-DBCzwUS-G_9&amp;source=constructor"
-          width="300" height="290" frameborder="0"></iframe>
-        <br> <br>
-        <img src="/static/images/99.png" class="img-fluid" alt="Цветы">
-        <br>
-        <br>
-        <font size="5" face="Lemon_Tuesday" color="#607873">
-          <p>- У нас есть пару вопросов к тебе -</p>
-        </font>
-      </font>
+    <p class="headers" id="p-margin">- Стиль свадьбы: эко-рустик -</p>
+    <p class="paragraph">Поэтому рекоммендованы бежевый, неяркие зеленый и коричневый,
+      <br> а также <a
+        href="https://wiki.wildberries.ru/glossary/%D0%BF%D0%B0%D1%81%D1%82%D0%B5%CC%81%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BE%D1%82%D1%82%D0%B5%D0%BD%D0%BE%D0%BA"
+        target="_blank">пастельные</a> оттенки одежды.
+      <br> Внимание! Под запретом яркие цвета (красный, пестрый принт, леопардовый и
+      пр).</p>
+    <br>
+    <p class="headers">- Коротко о подарках -</p>
+    <p class="paragraph">
+      Не ломай голову над ними. Твои пожелания в конверте помогут нам осуществить
+      мечту.
+      <br>И, пожалуйста, не дари цветы!
+      <br>Мы не успеем насладиться их красотой.
+      Вместо цветов мы с радостью примем <br>Настольную игру, Книгу или Грампластинку
+      :)
+    </p>
+    <br>
+    <p class="headers">- Место проведения -</p>
+    <p class="paragraph">Мини-Отель Таежный</p>
+    <p class="paragraph">Московская обл, Раменское, д. Заболотье, Ленинская 32/5</p>
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?um=constructor%3AR06aO-GG8X-RPHX9ICDj-DBCzwUS-G_9&amp;source=constructor"
+      width="300" height="290" frameborder="0"></iframe>
+    <br> <br>
+    <img src="/static/images/99.png" class="img-fluid" alt="Цветы">
 
-      <div class="row">
-        <div class="col-lg-4"></div>
+    <p class="headers">- У нас есть пару вопросов к тебе -</p>
 
-        <div class="col-lg-4">
-          <font face="CormorantGaramond" size="4" color="#43514e">
-            <form class="form-group" method="post" role="form_uni">
-              {{ form_uni.hidden_tag() }}
-              {{wtf.form_field(form_uni.confirmation)}}
-              <br>
-              {{wtf.form_field(form_uni.transfer)}}
-              <br>
-              {{wtf.form_field(form_uni.bed)}}<small class="form-text text-muted">Внимание, мест в отеле не
-                хватит на всех гостей</small>
-              <br>
-              {{wtf.form_field(form_uni.alcohol)}}
-              <br>
-              {{wtf.form_field(form_uni.text)}}
-              <br>
-              {{wtf.form_field(form_uni.wish)}}
-              <br>
-          </font>
-          <font face="CormorantGaramond" color="#55625F">
-            {{wtf.form_field(form_uni.checkbox1)}}
-            <br>
+    <div class="row">
+      <div class="col-lg-4"></div>
+
+      <div class="col-lg-4">
+
+        <form class="form-group" method="post" role="form_uni">
+          <div class="form-headers">
+            {{ form_uni.hidden_tag() }}
+            {{wtf.form_field(form_uni.confirmation)}}
+          </div>
+          <div class="form-headers">
+            {{wtf.form_field(form_uni.transfer)}}
+            {{wtf.form_field(form_uni.bed)}}<small class="form-text text-muted">Внимание, мест в отеле не
+              хватит на всех гостей</small>
+          </div>
+          <div class="form-headers">
+            {{wtf.form_field(form_uni.alcohol)}}
+          </div>
+          <div class="form-headers">
+            {{wtf.form_field(form_uni.text)}}
+          </div>
+          <div class="form-headers">
+            {{wtf.form_field(form_uni.wish)}}
+          </div>
+
+          <div class="little-text">
+            {{wtf.form_field(form_uni.checkbox1)}}</div>
+          <div class="little-text">
             {{wtf.form_field(form_uni.checkbox2)}}
-          </font>
-          <br>
-          <button type="submit" class="btn btn-secondary">Отправить</button>
-          <br>
-          </form>
-          <font face="CormorantGaramond" color="#55625F">
-            {% with messages = get_flashed_messages() %}
-            {% if messages %}
+          </div>
+          <button type="submit" class="btn btn-secondary" id="button-margin">Отправить</button>
+        </form>
+        <div class="little-text">
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
 
-            {% for message in messages %}
-            {{ message }}
-            {% endfor %}
+          {% for message in messages %}
+          {{ message }}
+          {% endfor %}
 
-            {% endif %}
-            {% endwith %}
+          {% endif %}
+          {% endwith %}
 
-            {% endblock %}
-          </font>
+          {% endblock %}
         </div>
-        <div class="col-lg-4"></div>
       </div>
-      <div class="row">
-        <div class="col-lg-4"></div>
-        <div class="form-group col-lg-4">
-          <img src="/static/images/12344.png" class="img-fluid" alt="Цветы">
-        </div>
-        <div class="col-lg-4"></div>
-      </div>
-
+      <div class="col-lg-4"></div>
     </div>
-  </body>
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="form-group col-lg-4">
+        <img src="/static/images/12344.png" class="img-fluid" alt="Цветы">
+      </div>
+      <div class="col-lg-4"></div>
+    </div>
+
+  </div>
+</body>
+
 </html>
